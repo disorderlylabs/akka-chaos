@@ -1,1 +1,5 @@
-addSbtPlugin("com.dwijnand" % "sbt-dynver" % "1.1.1")
+addSbtPlugin("com.lightbend.cinnamon" % "sbt-cinnamon" % "2.4.3")
+
+credentials += Credentials(Path.userHome / ".lightbend" / "commercial.credentials")
+
+resolvers += Resolver.url("lightbend-commercial", url("https://repo.lightbend.com/commercial-releases"))(Resolver.ivyStylePatterns)
