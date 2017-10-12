@@ -16,3 +16,6 @@ target/
 .project
 .settings
 .ensime
+*.log
+.ensime_cache/
+ensime.sbt

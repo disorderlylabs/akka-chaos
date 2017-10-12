@@ -8,13 +8,9 @@ cinnamonLogLevel := "INFO"
 
 scalaVersion := "2.12.2"
 
-// Use Coda Hale Metrics
-libraryDependencies += Cinnamon.library.cinnamonCHMetrics
-// Use Akka instrumentation
-libraryDependencies += Cinnamon.library.cinnamonAkka
-
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-remote" % "2.5.4"
+  "com.typesafe.akka" %% "akka-remote" % "2.5.4",
+  Cinnamon.library.cinnamonAkka,
+  Cinnamon.library.cinnamonCHMetrics,
+  Cinnamon.library.cinnamonOpenTracingZipkin
 )
-
-ensimeIgnoreScalaMismatch in ThisBuild := true
